@@ -1,0 +1,11 @@
+# 政治人物 + 负面动作 / 阴谋论 的"危险共现"词对
+# 命中任意一对 → risk_validator 返回 high，Hook 拒绝输出
+trump|treason
+trump|crime
+biden|dementia
+xi|dictator
+putin|murderer
+特朗普|叛国
+拜登|痴呆
+习近平|独裁
+普京|杀人

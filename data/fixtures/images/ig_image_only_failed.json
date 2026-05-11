@@ -1,0 +1,10 @@
+[
+  {
+    "status": "unavailable",
+    "ocr_text": "",
+    "objects": [],
+    "scene_caption": "",
+    "estimated_locale": null,
+    "notes": "fixture marks this image as unavailable to exercise the downgrade path (CLAUDE.md §4 #3)."
+  }
+]

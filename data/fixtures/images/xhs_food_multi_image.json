@@ -1,0 +1,26 @@
+[
+  {
+    "status": "ok",
+    "ocr_text": "招牌松鼠鳜鱼 ¥98",
+    "objects": ["fish_dish", "menu_card", "tablecloth"],
+    "scene_caption": "Top-down shot of a deep-fried sweet-and-sour fish carved into a 'squirrel' pattern, garnished with pine nuts.",
+    "estimated_locale": "Shanghai, CN",
+    "notes": "classic Shanghai dish; appetizing close-up; not a meme."
+  },
+  {
+    "status": "ok",
+    "ocr_text": "",
+    "objects": ["wok", "fire", "chef"],
+    "scene_caption": "Chef tossing food in a wok over open flame, motion blur on the rising flame.",
+    "estimated_locale": "Shanghai, CN",
+    "notes": "action shot; reinforces 'show-off cooking' angle."
+  },
+  {
+    "status": "ok",
+    "ocr_text": "糖醋小排 油爆河虾",
+    "objects": ["pork_ribs", "shrimp", "menu"],
+    "scene_caption": "Two side-by-side plates of sweet-and-sour ribs and stir-fried river shrimp.",
+    "estimated_locale": "Shanghai, CN",
+    "notes": "menu callout; brand-of-restaurant not visible."
+  }
+]

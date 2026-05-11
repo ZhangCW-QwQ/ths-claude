@@ -1,0 +1,232 @@
+{
+  "post_id": "xhs_pretty_house_boast",
+  "session_id": "xhs_pretty_house_boast-1778427821",
+  "understanding": {
+    "schema_version": "post_understanding/2026-05-10",
+    "facts": {
+      "platform": "xiaohongshu",
+      "post_id": "xhs_pretty_house_boast",
+      "url": "https://www.xiaohongshu.com/explore/example_001",
+      "posted_at": "2026-04-12T03:00:00Z",
+      "raw_title": "30岁存了点钱在上海买房了 自装系少女风",
+      "raw_body": "终于上车了！预算有限但全屋自装，墙漆Farrow&Ball、马桶TOTO、餐具Le Creuset。来评评！",
+      "has_image": true,
+      "image_count": 2,
+      "engagement_metrics": {
+        "like": 12400,
+        "comment": 837,
+        "share": 220
+      }
+    },
+    "judgments": {
+      "theme": "岁存了点",
+      "core_claim": "帖子主张 岁存了点 与 钱在上海 之间存在 隐性 关联",
+      "tone": "neutral",
+      "punch_points": [
+        "买房了",
+        "自装系少"
+      ],
+      "salt_points": [],
+      "contrast_points": [],
+      "why_engaging_hypothesis": "买房了; 自装系少",
+      "confidence": 0.7
+    },
+    "image_facts": [
+      {
+        "status": "ok",
+        "ocr_text": "Farrow & Ball | TOTO | Le Creuset",
+        "objects": [
+          "sofa",
+          "kitchen",
+          "wall_paint",
+          "kettle"
+        ],
+        "scene_caption": "A sunlit modern living room with pastel walls, mid-century sofa and a styled kitchen counter; tabletop products carry visible brand names.",
+        "estimated_locale": "Shanghai, CN",
+        "notes": "high-end home interior; deliberate brand placement; not a meme."
+      },
+      {
+        "status": "ok",
+        "ocr_text": "30岁 · 上海 · 自装",
+        "objects": [
+          "bedroom",
+          "wardrobe",
+          "wall_decor"
+        ],
+        "scene_caption": "Bedroom shot with floor-to-ceiling wardrobe and pastel-pink color blocking; a small caption overlay in the upper-left.",
+        "estimated_locale": "Shanghai, CN",
+        "notes": "lifestyle aesthetic; potential boast tone."
+      }
+    ],
+    "image_judgments": [
+      {
+        "sentiment": "humorous",
+        "is_meme": true,
+        "likely_punchline": "A sunlit modern living room with pastel walls, mid-century sofa and a styled kit",
+        "confidence": 0.7
+      },
+      {
+        "sentiment": "neutral",
+        "is_meme": false,
+        "likely_punchline": null,
+        "confidence": 0.7
+      }
+    ],
+    "risk": {
+      "flagged_buckets": [],
+      "sensitive_entities": [],
+      "overall_level": "low",
+      "rationale": "flagged buckets=[]; entities=[]; do_not_engage_hits=[]. 评级规则：do_not_engage 词表命中 = do_not_engage；政治+宗教共现 = high；任一命中 = medium；皆无 = low。"
+    },
+    "direction": {
+      "recommended_styles": [
+        "sharp_summary",
+        "thought_question",
+        "spicy_take"
+      ],
+      "avoid_styles": [],
+      "interaction_levers": [
+        "一针见血",
+        "反向提问"
+      ]
+    },
+    "notes": ""
+  },
+  "reference_analysis": {
+    "query": "岁存了点",
+    "selection_rationale": "从 4 条里筛 4 条： 1) 排除纯 upvote-bait（高 score 但低 reply 的鼓掌型） 2) 按 reply/upvote 排序选互动密度最高的 top-K 3) 通过 subreddit + 长度做多样性兜底，避免同套路",
+    "patterns": [
+      {
+        "name": "self_deprecating",
+        "description": "自嘲共情型",
+        "skeleton": "<self-include statement> ... <relatable pain>",
+        "why_it_works": "把读者拉进来，比单纯的判断更有粘性",
+        "examples_count": 1,
+        "confidence": 0.5
+      },
+      {
+        "name": "contrast_setup",
+        "description": "先承认对方再反转",
+        "skeleton": "<concede X> ... <but flip to Y>",
+        "why_it_works": "反转触发认知失调，激发回复欲",
+        "examples_count": 1,
+        "confidence": 0.5
+      },
+      {
+        "name": "rhetorical_question",
+        "description": "提问式评论，把判断让给读者",
+        "skeleton": "<setup statement> ... <question that flips the framing>",
+        "why_it_works": "提问比断言更安全，且引导回复",
+        "examples_count": 1,
+        "confidence": 0.5
+      }
+    ],
+    "sample_count": 4,
+    "confidence": "offline"
+  },
+  "candidates": [
+    {
+      "text": "一句话：岁存了点 是表象，钱在上海 是骨架。",
+      "style": "sharp_summary",
+      "leveraged_pattern": "contrast_setup",
+      "interaction_hypothesis": "命中读者心声 → 高 upvote、稳定置顶",
+      "why_it_could_work": "借鉴 contrast_setup（先承认对方再反转）；与帖子主题 '岁存了点' 直接挂钩；遵守 一针见血型总结 的 guideline。",
+      "self_risk_estimate": {
+        "offensiveness": 0.1,
+        "misread": 0.15,
+        "backfire": 0.15
+      },
+      "pending_review": true,
+      "validation": {
+        "state": "approved_for_human_use",
+        "reasons": [],
+        "metrics": {
+          "relevance": 0.133,
+          "max_trigram_overlap": 0.0,
+          "self_offensive": 0.1,
+          "self_misread": 0.15,
+          "self_backfire": 0.15
+        }
+      }
+    },
+    {
+      "text": "Genuine question — does 岁存了点 actually change anything for 钱在上海?",
+      "style": "thought_question",
+      "leveraged_pattern": "rhetorical_question",
+      "interaction_hypothesis": "把判断让给读者 → 引出 reply 链",
+      "why_it_could_work": "借鉴 rhetorical_question（提问式评论，把判断让给读者）；与帖子主题 '岁存了点' 直接挂钩；遵守 发人深省型提问 的 guideline。",
+      "self_risk_estimate": {
+        "offensiveness": 0.1,
+        "misread": 0.15,
+        "backfire": 0.05
+      },
+      "pending_review": true,
+      "validation": {
+        "state": "approved_for_human_use",
+        "reasons": [],
+        "metrics": {
+          "relevance": 0.133,
+          "max_trigram_overlap": 0.168,
+          "self_offensive": 0.1,
+          "self_misread": 0.15,
+          "self_backfire": 0.05
+        }
+      }
+    },
+    {
+      "text": "说真的，岁存了点 这件事大家都在装糊涂。本质就是 钱在上海。",
+      "style": "spicy_take",
+      "leveraged_pattern": "contrast_setup",
+      "interaction_hypothesis": "激发反对/拥护派对吵 → reply 数显著高于 upvote",
+      "why_it_could_work": "借鉴 contrast_setup（先承认对方再反转）；与帖子主题 '岁存了点' 直接挂钩；遵守 引战型观点 的 guideline。",
+      "self_risk_estimate": {
+        "offensiveness": 0.1,
+        "misread": 0.15,
+        "backfire": 0.15
+      },
+      "pending_review": true,
+      "validation": {
+        "state": "approved_for_human_use",
+        "reasons": [],
+        "metrics": {
+          "relevance": 0.133,
+          "max_trigram_overlap": 0.0,
+          "self_offensive": 0.1,
+          "self_misread": 0.15,
+          "self_backfire": 0.15
+        }
+      }
+    }
+  ],
+  "recommended": {
+    "text": "Genuine question — does 岁存了点 actually change anything for 钱在上海?",
+    "style": "thought_question",
+    "leveraged_pattern": "rhetorical_question",
+    "interaction_hypothesis": "把判断让给读者 → 引出 reply 链",
+    "why_it_could_work": "借鉴 rhetorical_question（提问式评论，把判断让给读者）；与帖子主题 '岁存了点' 直接挂钩；遵守 发人深省型提问 的 guideline。",
+    "self_risk_estimate": {
+      "offensiveness": 0.1,
+      "misread": 0.15,
+      "backfire": 0.05
+    },
+    "pending_review": true,
+    "validation": {
+      "state": "approved_for_human_use",
+      "reasons": [],
+      "metrics": {
+        "relevance": 0.133,
+        "max_trigram_overlap": 0.168,
+        "self_offensive": 0.1,
+        "self_misread": 0.15,
+        "self_backfire": 0.05
+      }
+    }
+  },
+  "recommended_rationale": "Picked style=thought_question, relevance=0.133, backfire=0.05 — best of 3 passing candidates.",
+  "blocked_by_hook": null,
+  "downgrade_flags": {
+    "retrieval_offline": true,
+    "any_image_unavailable": false,
+    "injection_suspected": false
+  }
+}

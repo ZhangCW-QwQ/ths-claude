@@ -1,0 +1,209 @@
+{
+  "post_id": "weibo_brand_negative",
+  "session_id": "weibo_brand_negative-1778427821",
+  "understanding": {
+    "schema_version": "post_understanding/2026-05-10",
+    "facts": {
+      "platform": "weibo",
+      "post_id": "weibo_brand_negative",
+      "url": "https://weibo.com/example011",
+      "posted_at": "2026-05-04T18:45:00Z",
+      "raw_title": "某新势力车主三个月内三次维修",
+      "raw_body": "车机自动重启、雷达虚报、空调间歇罢工。售后说'OTA 会修'。已经第三次了我想知道 OTA 能修我对它的信任吗？",
+      "has_image": false,
+      "image_count": 0,
+      "engagement_metrics": {
+        "forward": 1200,
+        "comment": 4300,
+        "like": 22000
+      }
+    },
+    "judgments": {
+      "theme": "某新势力",
+      "core_claim": "帖子主张 某新势力 与 车主三个 之间存在 隐性 关联",
+      "tone": "neutral",
+      "punch_points": [
+        "月内三次",
+        "维修"
+      ],
+      "salt_points": [],
+      "contrast_points": [],
+      "why_engaging_hypothesis": "月内三次; 维修",
+      "confidence": 0.7
+    },
+    "image_facts": [],
+    "image_judgments": [],
+    "risk": {
+      "flagged_buckets": [],
+      "sensitive_entities": [],
+      "overall_level": "low",
+      "rationale": "flagged buckets=[]; entities=[]; do_not_engage_hits=[]. 评级规则：do_not_engage 词表命中 = do_not_engage；政治+宗教共现 = high；任一命中 = medium；皆无 = low。"
+    },
+    "direction": {
+      "recommended_styles": [
+        "sharp_summary",
+        "thought_question",
+        "spicy_take"
+      ],
+      "avoid_styles": [],
+      "interaction_levers": [
+        "一针见血",
+        "反向提问"
+      ]
+    },
+    "notes": ""
+  },
+  "reference_analysis": {
+    "query": "某新势力",
+    "selection_rationale": "从 4 条里筛 4 条： 1) 排除纯 upvote-bait（高 score 但低 reply 的鼓掌型） 2) 按 reply/upvote 排序选互动密度最高的 top-K 3) 通过 subreddit + 长度做多样性兜底，避免同套路",
+    "patterns": [
+      {
+        "name": "contrast_setup",
+        "description": "先承认对方再反转",
+        "skeleton": "<concede X> ... <but flip to Y>",
+        "why_it_works": "反转触发认知失调，激发回复欲",
+        "examples_count": 1,
+        "confidence": 0.5
+      },
+      {
+        "name": "data_drop",
+        "description": "丢出一个具体数字制造可信度",
+        "skeleton": "<concrete number> + <implication>",
+        "why_it_works": "数字让评论不像情绪发泄、更像内行",
+        "examples_count": 1,
+        "confidence": 0.5
+      },
+      {
+        "name": "self_deprecating",
+        "description": "自嘲共情型",
+        "skeleton": "<self-include statement> ... <relatable pain>",
+        "why_it_works": "把读者拉进来，比单纯的判断更有粘性",
+        "examples_count": 1,
+        "confidence": 0.5
+      },
+      {
+        "name": "rhetorical_question",
+        "description": "提问式评论，把判断让给读者",
+        "skeleton": "<setup statement> ... <question that flips the framing>",
+        "why_it_works": "提问比断言更安全，且引导回复",
+        "examples_count": 1,
+        "confidence": 0.5
+      },
+      {
+        "name": "punchy_one_liner",
+        "description": "极简一句话总结，下面接力讨论",
+        "skeleton": "<short, punchy summary>",
+        "why_it_works": "代言群众情绪，门槛低、转发欲望高",
+        "examples_count": 1,
+        "confidence": 0.5
+      }
+    ],
+    "sample_count": 4,
+    "confidence": "offline"
+  },
+  "candidates": [
+    {
+      "text": "TL;DR — 某新势力 不是问题，车主三个 才是。",
+      "style": "sharp_summary",
+      "leveraged_pattern": "punchy_one_liner",
+      "interaction_hypothesis": "命中读者心声 → 高 upvote、稳定置顶",
+      "why_it_could_work": "借鉴 punchy_one_liner（极简一句话总结，下面接力讨论）；与帖子主题 '某新势力' 直接挂钩；遵守 一针见血型总结 的 guideline。",
+      "self_risk_estimate": {
+        "offensiveness": 0.1,
+        "misread": 0.15,
+        "backfire": 0.15
+      },
+      "pending_review": true,
+      "validation": {
+        "state": "approved_for_human_use",
+        "reasons": [],
+        "metrics": {
+          "relevance": 0.141,
+          "max_trigram_overlap": 0.012,
+          "self_offensive": 0.1,
+          "self_misread": 0.15,
+          "self_backfire": 0.15
+        }
+      }
+    },
+    {
+      "text": "认真问一下：如果把 某新势力 换成 车主三个，你的判断会变吗？",
+      "style": "thought_question",
+      "leveraged_pattern": "rhetorical_question",
+      "interaction_hypothesis": "把判断让给读者 → 引出 reply 链",
+      "why_it_could_work": "借鉴 rhetorical_question（提问式评论，把判断让给读者）；与帖子主题 '某新势力' 直接挂钩；遵守 发人深省型提问 的 guideline。",
+      "self_risk_estimate": {
+        "offensiveness": 0.1,
+        "misread": 0.15,
+        "backfire": 0.05
+      },
+      "pending_review": true,
+      "validation": {
+        "state": "approved_for_human_use",
+        "reasons": [],
+        "metrics": {
+          "relevance": 0.141,
+          "max_trigram_overlap": 0.0,
+          "self_offensive": 0.1,
+          "self_misread": 0.15,
+          "self_backfire": 0.05
+        }
+      }
+    },
+    {
+      "text": "说真的，某新势力 这件事大家都在装糊涂。本质就是 车主三个。",
+      "style": "spicy_take",
+      "leveraged_pattern": "contrast_setup",
+      "interaction_hypothesis": "激发反对/拥护派对吵 → reply 数显著高于 upvote",
+      "why_it_could_work": "借鉴 contrast_setup（先承认对方再反转）；与帖子主题 '某新势力' 直接挂钩；遵守 引战型观点 的 guideline。",
+      "self_risk_estimate": {
+        "offensiveness": 0.1,
+        "misread": 0.15,
+        "backfire": 0.15
+      },
+      "pending_review": true,
+      "validation": {
+        "state": "approved_for_human_use",
+        "reasons": [],
+        "metrics": {
+          "relevance": 0.141,
+          "max_trigram_overlap": 0.0,
+          "self_offensive": 0.1,
+          "self_misread": 0.15,
+          "self_backfire": 0.15
+        }
+      }
+    }
+  ],
+  "recommended": {
+    "text": "认真问一下：如果把 某新势力 换成 车主三个，你的判断会变吗？",
+    "style": "thought_question",
+    "leveraged_pattern": "rhetorical_question",
+    "interaction_hypothesis": "把判断让给读者 → 引出 reply 链",
+    "why_it_could_work": "借鉴 rhetorical_question（提问式评论，把判断让给读者）；与帖子主题 '某新势力' 直接挂钩；遵守 发人深省型提问 的 guideline。",
+    "self_risk_estimate": {
+      "offensiveness": 0.1,
+      "misread": 0.15,
+      "backfire": 0.05
+    },
+    "pending_review": true,
+    "validation": {
+      "state": "approved_for_human_use",
+      "reasons": [],
+      "metrics": {
+        "relevance": 0.141,
+        "max_trigram_overlap": 0.0,
+        "self_offensive": 0.1,
+        "self_misread": 0.15,
+        "self_backfire": 0.05
+      }
+    }
+  },
+  "recommended_rationale": "Picked style=thought_question, relevance=0.141, backfire=0.05 — best of 3 passing candidates.",
+  "blocked_by_hook": null,
+  "downgrade_flags": {
+    "retrieval_offline": true,
+    "any_image_unavailable": false,
+    "injection_suspected": false
+  }
+}

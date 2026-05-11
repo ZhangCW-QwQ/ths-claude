@@ -1,0 +1,5 @@
+# 这是 demo 词表的占位 — 生产词表由合规给出，按 .mcp.json 的 sensitive-lexicon server 拉取。
+# 词不分大小写匹配。每行一条；# 开头是注释。
+# 真表中应包含：种族、民族、性向歧视性词汇等。这里只放最最显而易见的几个，避免在仓库里夹带攻击性内容。
+slur_placeholder_xyzzy
+ethnic_slur_placeholder

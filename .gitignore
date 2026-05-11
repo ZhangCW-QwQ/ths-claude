@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.pytest_cache/
+pytest-cache-files-*/
+.DS_Store
+.coverage
+htmlcov/
+*.egg-info/
+.mypy_cache/
+
+# evidence sessions are run-time logs; keep README + decisions + adversarial only
+evidence/sessions/*
+!evidence/sessions/.gitkeep

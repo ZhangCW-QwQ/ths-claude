@@ -1,0 +1,213 @@
+{
+  "post_id": "weibo_996_rant",
+  "session_id": "weibo_996_rant-1778427821",
+  "understanding": {
+    "schema_version": "post_understanding/2026-05-10",
+    "facts": {
+      "platform": "weibo",
+      "post_id": "weibo_996_rant",
+      "url": "https://weibo.com/example003",
+      "posted_at": "2026-04-30T22:11:00Z",
+      "raw_title": "凌晨2点公司还亮着灯",
+      "raw_body": "项目延期，PM说'再加把劲'，加把劲是把命加进去吗？",
+      "has_image": true,
+      "image_count": 1,
+      "engagement_metrics": {
+        "forward": 240,
+        "comment": 1820,
+        "like": 18000
+      }
+    },
+    "judgments": {
+      "theme": "凌晨",
+      "core_claim": "帖子主张 凌晨 与 点公司还 之间存在 隐性 关联",
+      "tone": "neutral",
+      "punch_points": [
+        "亮着灯",
+        "项目延期"
+      ],
+      "salt_points": [],
+      "contrast_points": [],
+      "why_engaging_hypothesis": "亮着灯; 项目延期",
+      "confidence": 0.7
+    },
+    "image_facts": [
+      {
+        "status": "ok",
+        "ocr_text": "02:17",
+        "objects": [
+          "office_window",
+          "ceiling_lights",
+          "skyline"
+        ],
+        "scene_caption": "Night shot looking out from a high-rise office window; many neighboring towers also still lit; an OS clock readout shows 02:17.",
+        "estimated_locale": "CN, T1 city",
+        "notes": "fits a 996 / late-night work post; no faces, no badges."
+      }
+    ],
+    "image_judgments": [
+      {
+        "sentiment": "neutral",
+        "is_meme": false,
+        "likely_punchline": null,
+        "confidence": 0.7
+      }
+    ],
+    "risk": {
+      "flagged_buckets": [],
+      "sensitive_entities": [],
+      "overall_level": "low",
+      "rationale": "flagged buckets=[]; entities=[]; do_not_engage_hits=[]. 评级规则：do_not_engage 词表命中 = do_not_engage；政治+宗教共现 = high；任一命中 = medium；皆无 = low。"
+    },
+    "direction": {
+      "recommended_styles": [
+        "sharp_summary",
+        "thought_question",
+        "spicy_take"
+      ],
+      "avoid_styles": [],
+      "interaction_levers": [
+        "一针见血",
+        "反向提问"
+      ]
+    },
+    "notes": ""
+  },
+  "reference_analysis": {
+    "query": "凌晨",
+    "selection_rationale": "从 4 条里筛 4 条： 1) 排除纯 upvote-bait（高 score 但低 reply 的鼓掌型） 2) 按 reply/upvote 排序选互动密度最高的 top-K 3) 通过 subreddit + 长度做多样性兜底，避免同套路",
+    "patterns": [
+      {
+        "name": "self_deprecating",
+        "description": "自嘲共情型",
+        "skeleton": "<self-include statement> ... <relatable pain>",
+        "why_it_works": "把读者拉进来，比单纯的判断更有粘性",
+        "examples_count": 1,
+        "confidence": 0.5
+      },
+      {
+        "name": "contrast_setup",
+        "description": "先承认对方再反转",
+        "skeleton": "<concede X> ... <but flip to Y>",
+        "why_it_works": "反转触发认知失调，激发回复欲",
+        "examples_count": 1,
+        "confidence": 0.5
+      },
+      {
+        "name": "rhetorical_question",
+        "description": "提问式评论，把判断让给读者",
+        "skeleton": "<setup statement> ... <question that flips the framing>",
+        "why_it_works": "提问比断言更安全，且引导回复",
+        "examples_count": 1,
+        "confidence": 0.5
+      }
+    ],
+    "sample_count": 4,
+    "confidence": "offline"
+  },
+  "candidates": [
+    {
+      "text": "一句话：凌晨 是表象，点公司还 是骨架。",
+      "style": "sharp_summary",
+      "leveraged_pattern": "contrast_setup",
+      "interaction_hypothesis": "命中读者心声 → 高 upvote、稳定置顶",
+      "why_it_could_work": "借鉴 contrast_setup（先承认对方再反转）；与帖子主题 '凌晨' 直接挂钩；遵守 一针见血型总结 的 guideline。",
+      "self_risk_estimate": {
+        "offensiveness": 0.1,
+        "misread": 0.15,
+        "backfire": 0.15
+      },
+      "pending_review": true,
+      "validation": {
+        "state": "approved_for_human_use",
+        "reasons": [],
+        "metrics": {
+          "relevance": 0.267,
+          "max_trigram_overlap": 0.0,
+          "self_offensive": 0.1,
+          "self_misread": 0.15,
+          "self_backfire": 0.15
+        }
+      }
+    },
+    {
+      "text": "Genuine question — does 凌晨 actually change anything for 点公司还?",
+      "style": "thought_question",
+      "leveraged_pattern": "rhetorical_question",
+      "interaction_hypothesis": "把判断让给读者 → 引出 reply 链",
+      "why_it_could_work": "借鉴 rhetorical_question（提问式评论，把判断让给读者）；与帖子主题 '凌晨' 直接挂钩；遵守 发人深省型提问 的 guideline。",
+      "self_risk_estimate": {
+        "offensiveness": 0.1,
+        "misread": 0.15,
+        "backfire": 0.05
+      },
+      "pending_review": true,
+      "validation": {
+        "state": "approved_for_human_use",
+        "reasons": [],
+        "metrics": {
+          "relevance": 0.267,
+          "max_trigram_overlap": 0.171,
+          "self_offensive": 0.1,
+          "self_misread": 0.15,
+          "self_backfire": 0.05
+        }
+      }
+    },
+    {
+      "text": "说真的，凌晨 这件事大家都在装糊涂。本质就是 点公司还。",
+      "style": "spicy_take",
+      "leveraged_pattern": "contrast_setup",
+      "interaction_hypothesis": "激发反对/拥护派对吵 → reply 数显著高于 upvote",
+      "why_it_could_work": "借鉴 contrast_setup（先承认对方再反转）；与帖子主题 '凌晨' 直接挂钩；遵守 引战型观点 的 guideline。",
+      "self_risk_estimate": {
+        "offensiveness": 0.1,
+        "misread": 0.15,
+        "backfire": 0.15
+      },
+      "pending_review": true,
+      "validation": {
+        "state": "approved_for_human_use",
+        "reasons": [],
+        "metrics": {
+          "relevance": 0.267,
+          "max_trigram_overlap": 0.0,
+          "self_offensive": 0.1,
+          "self_misread": 0.15,
+          "self_backfire": 0.15
+        }
+      }
+    }
+  ],
+  "recommended": {
+    "text": "Genuine question — does 凌晨 actually change anything for 点公司还?",
+    "style": "thought_question",
+    "leveraged_pattern": "rhetorical_question",
+    "interaction_hypothesis": "把判断让给读者 → 引出 reply 链",
+    "why_it_could_work": "借鉴 rhetorical_question（提问式评论，把判断让给读者）；与帖子主题 '凌晨' 直接挂钩；遵守 发人深省型提问 的 guideline。",
+    "self_risk_estimate": {
+      "offensiveness": 0.1,
+      "misread": 0.15,
+      "backfire": 0.05
+    },
+    "pending_review": true,
+    "validation": {
+      "state": "approved_for_human_use",
+      "reasons": [],
+      "metrics": {
+        "relevance": 0.267,
+        "max_trigram_overlap": 0.171,
+        "self_offensive": 0.1,
+        "self_misread": 0.15,
+        "self_backfire": 0.05
+      }
+    }
+  },
+  "recommended_rationale": "Picked style=thought_question, relevance=0.267, backfire=0.05 — best of 3 passing candidates.",
+  "blocked_by_hook": null,
+  "downgrade_flags": {
+    "retrieval_offline": true,
+    "any_image_unavailable": false,
+    "injection_suspected": false
+  }
+}

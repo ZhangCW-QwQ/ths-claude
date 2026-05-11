@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="hero-title hero-desc" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif">
+  <title id="hero-title">God-comment system</title>
+  <desc id="hero-desc">A pipeline diagram showing post → understanding → references → candidates → recommended, with three risk hooks layered underneath.</desc>
+
+  <defs>
+    <style>
+      .surface { fill: #ffffff; }
+      .ink { fill: #1a1a19; }
+      .ink-2 { fill: #5a5a55; }
+      .ink-3 { fill: #8a8a82; }
+      .accent { fill: #185fa5; }
+      .accent-bg { fill: #e6f1fb; }
+      .ok { fill: #0f6e56; }
+      .ok-bg { fill: #e1f5ee; }
+      .warn { fill: #854f0b; }
+      .warn-bg { fill: #faeeda; }
+      .danger { fill: #a32d2d; }
+      .danger-bg { fill: #fcebeb; }
+      .stroke-soft { stroke: rgba(0,0,0,0.10); stroke-width: 1; fill: none; }
+      .stroke-mid { stroke: rgba(0,0,0,0.18); stroke-width: 1.2; fill: none; }
+      .label { font-size: 13px; font-weight: 500; }
+      .meta { font-size: 11px; }
+      .arrow { stroke: #8a8a82; stroke-width: 1.4; fill: none; marker-end: url(#arrowhead); }
+      .hook-arrow { stroke: #a32d2d; stroke-width: 1.4; fill: none; stroke-dasharray: 4 3; marker-end: url(#arrowhead-r); }
+    </style>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8a82"/>
+    </marker>
+    <marker id="arrowhead-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a32d2d"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="320" fill="#fafaf7"/>
+
+  <text x="40" y="46" class="ink" font-size="22" font-weight="500">God-comment system</text>
+  <text x="40" y="70" class="ink-2" font-size="13">理解多模态社媒帖子 · 学习高互动评论套路 · 在三层风险护栏下原创神评论</text>
+
+  <g transform="translate(40, 110)">
+    <g transform="translate(0, 0)">
+      <rect class="surface" x="0" y="0" width="180" height="84" rx="12" stroke="rgba(0,0,0,0.10)" stroke-width="1"/>
+      <circle cx="22" cy="22" r="12" class="accent-bg"/>
+      <text x="22" y="26" class="accent" font-size="14" text-anchor="middle" font-weight="500">1</text>
+      <text x="44" y="26" class="ink" class="label" font-size="13" font-weight="500">Understand</text>
+      <text x="14" y="48" class="ink-2" font-size="11">multimodal post</text>
+      <text x="14" y="62" class="ink-2" font-size="11">facts vs judgments</text>
+      <text x="14" y="76" class="ink-3" font-size="10.5">schema · risk scan</text>
+    </g>
+
+    <g transform="translate(208, 0)">
+      <rect class="surface" x="0" y="0" width="180" height="84" rx="12" stroke="rgba(0,0,0,0.10)" stroke-width="1"/>
+      <circle cx="22" cy="22" r="12" class="accent-bg"/>
+      <text x="22" y="26" class="accent" font-size="14" text-anchor="middle" font-weight="500">2</text>
+      <text x="44" y="26" class="ink" font-size="13" font-weight="500">Retrieve</text>
+      <text x="14" y="48" class="ink-2" font-size="11">reddit reference</text>
+      <text x="14" y="62" class="ink-2" font-size="11">pattern extract</text>
+      <text x="14" y="76" class="ink-3" font-size="10.5">no raw text in prompt</text>
+    </g>
+
+    <g transform="translate(416, 0)">
+      <rect class="surface" x="0" y="0" width="180" height="84" rx="12" stroke="rgba(0,0,0,0.10)" stroke-width="1"/>
+      <circle cx="22" cy="22" r="12" class="accent-bg"/>
+      <text x="22" y="26" class="accent" font-size="14" text-anchor="middle" font-weight="500">3</text>
+      <text x="44" y="26" class="ink" font-size="13" font-weight="500">Generate</text>
+      <text x="14" y="48" class="ink-2" font-size="11">3-5 candidates</text>
+      <text x="14" y="62" class="ink-2" font-size="11">multi-style routing</text>
+      <text x="14" y="76" class="ink-3" font-size="10.5">untrusted-input wrap</text>
+    </g>
+
+    <g transform="translate(624, 0)">
+      <rect class="surface" x="0" y="0" width="180" height="84" rx="12" stroke="rgba(0,0,0,0.10)" stroke-width="1"/>
+      <circle cx="22" cy="22" r="12" class="accent-bg"/>
+      <text x="22" y="26" class="accent" font-size="14" text-anchor="middle" font-weight="500">4</text>
+      <text x="44" y="26" class="ink" font-size="13" font-weight="500">Validate</text>
+      <text x="14" y="48" class="ink-2" font-size="11">5-layer risk gate</text>
+      <text x="14" y="62" class="ink-2" font-size="11">trigram plagiarism</text>
+      <text x="14" y="76" class="ink-3" font-size="10.5">state machine</text>
+    </g>
+
+    <g transform="translate(832, 0)">
+      <rect class="ok-bg" x="0" y="0" width="180" height="84" rx="12"/>
+      <circle cx="22" cy="22" r="12" fill="#0f6e56"/>
+      <text x="22" y="26" fill="#ffffff" font-size="14" text-anchor="middle" font-weight="500">5</text>
+      <text x="44" y="26" class="ok" font-size="13" font-weight="500">Pick best</text>
+      <text x="14" y="48" class="ok" font-size="11">approved_for_human_use</text>
+      <text x="14" y="62" class="ok" font-size="11">never auto-published</text>
+      <text x="14" y="76" class="ok" font-size="10.5">always pending review</text>
+    </g>
+
+    <line x1="180" y1="42" x2="208" y2="42" class="arrow"/>
+    <line x1="388" y1="42" x2="416" y2="42" class="arrow"/>
+    <line x1="596" y1="42" x2="624" y2="42" class="arrow"/>
+    <line x1="804" y1="42" x2="832" y2="42" class="arrow"/>
+  </g>
+
+  <g transform="translate(40, 220)">
+    <text x="0" y="0" class="ink-3" font-size="11" letter-spacing="1">PROGRAMMATIC HOOKS · LAST WALL</text>
+
+    <g transform="translate(0, 16)">
+      <rect class="warn-bg" x="0" y="0" width="320" height="64" rx="12"/>
+      <text x="14" y="22" class="warn" font-size="13" font-weight="500">pre_generation_injection_guard</text>
+      <text x="14" y="40" class="warn" font-size="11.5">注入嫌疑 + high risk → 拒绝生成</text>
+      <text x="14" y="56" class="warn" font-size="11.5">pattern.description 超长 → 拒绝（防原文泄露）</text>
+    </g>
+
+    <g transform="translate(340, 16)">
+      <rect class="warn-bg" x="0" y="0" width="320" height="64" rx="12"/>
+      <text x="14" y="22" class="warn" font-size="13" font-weight="500">pre_publish_safety_gate</text>
+      <text x="14" y="40" class="warn" font-size="11.5">候选状态非法 → BLOCKED</text>
+      <text x="14" y="56" class="warn" font-size="11.5">风格漂移（注入信号）→ BLOCKED</text>
+    </g>
+
+    <g transform="translate(680, 16)">
+      <rect class="warn-bg" x="0" y="0" width="320" height="64" rx="12"/>
+      <text x="14" y="22" class="warn" font-size="13" font-weight="500">prompt_secret_leak_guard</text>
+      <text x="14" y="40" class="warn" font-size="11.5">候选含 sk-/AKIA/key= → BLOCKED</text>
+      <text x="14" y="56" class="warn" font-size="11.5">allow-list 走 hooks.config.yaml</text>
+    </g>
+
+    <line x1="160" y1="-6" x2="160" y2="-26" stroke="#a32d2d" stroke-width="1.4" stroke-dasharray="4 3"/>
+    <line x1="500" y1="-6" x2="500" y2="-26" stroke="#a32d2d" stroke-width="1.4" stroke-dasharray="4 3"/>
+    <line x1="840" y1="-6" x2="840" y2="-26" stroke="#a32d2d" stroke-width="1.4" stroke-dasharray="4 3"/>
+  </g>
+
+  <g transform="translate(40, 296)">
+    <text class="ink-3" font-size="11">36/36 tests passing · 4 skills · 3 hooks · 13 test posts · 11 end-to-end examples</text>
+  </g>
+</svg>

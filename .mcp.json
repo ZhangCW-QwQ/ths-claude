@@ -1,0 +1,50 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/mcp-config.json",
+  "_comment": "MCP 接线遵循最小权限：每个 server 列了 scope / why / fallback。新增 server 必须把这三栏补齐，否则 hooks/registry_guard.py 会拒绝 commit。",
+  "mcpServers": {
+    "reddit-search": {
+      "command": "uvx",
+      "args": ["reddit-mcp", "--read-only"],
+      "env": {
+        "REDDIT_USER_AGENT": "godcomment-research/0.1 (contact: ops@example.com)",
+        "REDDIT_RATE_LIMIT_PER_MIN": "30"
+      },
+      "scope": ["search.public", "comments.read"],
+      "why": "供 reference-mining Skill 检索高互动评论以做套路抽取。只读，不要任何 write/post/vote 权限。",
+      "fallback": "若 server 不可用，src/retrieval/reddit_client.py 自动切换到 data/fixtures/reddit_*.json 离线快照，并标记 reference_analysis.confidence='offline'。",
+      "rate_limit_strategy": "30 req/min；超限走指数退避 + 改用 fixtures。"
+    },
+
+    "image-understanding": {
+      "command": "uvx",
+      "args": ["multimodal-vision-mcp"],
+      "env": {
+        "VISION_PROVIDER": "anthropic-claude-vision",
+        "VISION_MAX_IMAGE_BYTES": "5242880",
+        "VISION_OCR_LANGS": "en,zh-CN,zh-TW,ja"
+      },
+      "scope": ["images.describe", "images.ocr"],
+      "why": "对帖子图片做 OCR + 物体识别 + 场景描述，给 understanding 模块做事实层。绝不传图片到任何含训练同意权限的 server。",
+      "fallback": "图片下载失败 / vision 超时 → 写入 PostUnderstanding.image.status='unavailable'，pipeline 降级到 text-only 路径并把 confidence 整体 -0.2。"
+    },
+
+    "sensitive-lexicon": {
+      "command": "node",
+      "args": ["./mcp_servers/sensitive_lexicon/index.js"],
+      "env": {
+        "LEXICON_VERSION": "2026-04",
+        "LEXICON_LOCALES": "en,zh-CN"
+      },
+      "scope": ["lexicon.lookup"],
+      "why": "敏感词 / 禁用语 / 政治人物名单的统一查询入口。词表与版本由合规给出，本仓库不直接 hard-code。Hook 启动时强制版本检查。",
+      "fallback": "本地 src/risk/blocklists/*.txt 是冷备词表，server 挂了也能跑，但会在 risk_assessment 里加 warning='lexicon_offline'。"
+    },
+
+    "_disabled_examples": {
+      "_comment": "下面这些 server 我们刻意没接入，标注理由方便后人少走弯路。",
+      "twitter-x-search": "x.com 的搜索 API 在评论排序上对引战内容有偏置，作为'套路样本'会污染我们对'什么算神评论'的理解。",
+      "tiktok-trends": "视频内容理解远超本系统范围，且 TOS 限制严格。",
+      "any-write-mcp": "本项目不允许任何 write/publish 权限的 MCP，从源头切断红线 R3。"
+    }
+  }
+}

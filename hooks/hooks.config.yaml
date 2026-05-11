@@ -1,0 +1,38 @@
+# hooks.config.yaml — 运行时 hook 控制面板
+#
+# Ops 可以在不改代码的情况下：
+#   - 临时禁用某个 hook（事故应急），通过环境变量 GODCOMMENT_DISABLE_HOOKS=name1,name2
+#   - 微调阈值（比如 max_description_chars）
+#
+# CHANGELOG 是这份文件的一部分 —— 任何阈值改动都必须留一行 changelog，否则 CI 拒绝合并。
+
+hooks:
+  pre_generation_injection_guard:
+    enabled: true
+    blocking: true
+    params:
+      max_description_chars: 240
+    notes: "提高此阈值前，确认 reference 来源没有滥用 LLM 抽取（容易把原文塞进描述里）。"
+
+  pre_publish_safety_gate:
+    enabled: true
+    blocking: true
+    params:
+      detect_style_drift: true
+    notes: |
+      style_drift 检测对单风格 understanding 容易误报；如果发现 → 优先升级 understanding
+      的 direction.recommended_styles，不要把 hook 关了。
+
+  prompt_secret_leak_guard:
+    enabled: true
+    blocking: true
+    params:
+      allow_list:
+        - "sk-fake"
+        - "AKIAFAKE000000000000"
+    notes: "演示用 secret 串放 allow_list；真 secret 一律不可入仓库。"
+
+changelog:
+  - date: 2026-05-10
+    by: candidate
+    change: "initial config; thresholds tuned against the 10-post test set."

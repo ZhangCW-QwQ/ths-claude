@@ -1,0 +1,10 @@
+[
+  {
+    "status": "ok",
+    "ocr_text": "02:17",
+    "objects": ["office_window", "ceiling_lights", "skyline"],
+    "scene_caption": "Night shot looking out from a high-rise office window; many neighboring towers also still lit; an OS clock readout shows 02:17.",
+    "estimated_locale": "CN, T1 city",
+    "notes": "fits a 996 / late-night work post; no faces, no badges."
+  }
+]

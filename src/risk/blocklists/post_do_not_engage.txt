@@ -1,0 +1,16 @@
+# 帖子本身命中以下模式 → understanding.risk.overall_level = 'do_not_engage'
+# pipeline 不再生成任何评论候选。这与 L1 (词表) 不同：L1 是对候选评论的过滤；
+# 这个表是对**帖子本身**的"不参与"判定。
+#
+# 选词标准：助长真实伤害的内容 — 反疫苗、自伤鼓动、极端饮食、未成年人不当语境 等。
+不要打疫苗
+反疫苗
+天瘦
+天减肥
+自杀方法
+怎么自杀
+抑郁怎么死
+self harm methods
+how to kill myself
+pro-ana
+thinspo

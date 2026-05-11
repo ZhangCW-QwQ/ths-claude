@@ -1,0 +1,10 @@
+[
+  {
+    "status": "ok",
+    "ocr_text": "WHEN MONDAY HITS\nAGAIN",
+    "objects": ["cat", "blanket", "sunbeam"],
+    "scene_caption": "Image macro: a wide-eyed orange cat half-buried in a fleece blanket; bold meme-style top + bottom captions.",
+    "estimated_locale": null,
+    "notes": "classic image macro / meme; high humor signal."
+  }
+]

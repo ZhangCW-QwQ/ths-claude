@@ -1,0 +1,8 @@
+# 出现这些短语时，评论可能变成"医疗建议" → 法律风险高
+take this medication
+stop taking your meds
+cure for cancer
+covid is fake
+不要打疫苗
+停药
+能治愈癌症

@@ -1,0 +1,18 @@
+[
+  {
+    "status": "ok",
+    "ocr_text": "Farrow & Ball | TOTO | Le Creuset",
+    "objects": ["sofa", "kitchen", "wall_paint", "kettle"],
+    "scene_caption": "A sunlit modern living room with pastel walls, mid-century sofa and a styled kitchen counter; tabletop products carry visible brand names.",
+    "estimated_locale": "Shanghai, CN",
+    "notes": "high-end home interior; deliberate brand placement; not a meme."
+  },
+  {
+    "status": "ok",
+    "ocr_text": "30岁 · 上海 · 自装",
+    "objects": ["bedroom", "wardrobe", "wall_decor"],
+    "scene_caption": "Bedroom shot with floor-to-ceiling wardrobe and pastel-pink color blocking; a small caption overlay in the upper-left.",
+    "estimated_locale": "Shanghai, CN",
+    "notes": "lifestyle aesthetic; potential boast tone."
+  }
+]
